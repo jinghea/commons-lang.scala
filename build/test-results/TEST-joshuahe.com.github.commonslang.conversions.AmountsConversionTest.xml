@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-05-07T07:40:23" hostname="jing-MacBookPro" time="0.007">
+  <properties/>
+  <testcase name="safeJBigDecimal2BigDecimal should return scala bigdecimal" classname="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" time="0.003"/>
+  <testcase name="safeJBigDecimal2BigDecimal with null should return scala bigdecimal with 0" classname="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" time="0.0"/>
+  <testcase name="bigDecimal2JBigDecimal should return java bigdecimal" classname="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" time="0.001"/>
+  <testcase name="int2JBigDecimal should return java bigdecimal" classname="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" time="0.0"/>
+  <testcase name="double2JBigDecimal should return java bigdecimal" classname="joshuahe.com.github.commonslang.conversions.AmountsConversionTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

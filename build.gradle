@@ -1,0 +1,27 @@
+group 'joshuahe.com.github'
+version '1'
+
+apply plugin: 'scala'
+apply plugin: 'maven'
+
+
+repositories {
+    //mavenCentral()
+    mavenLocal()
+
+    maven { url "http://repo1.maven.org/maven2" }
+    maven { url "http://repository.jboss.com/maven2/" }
+    maven { url "http://repository.sonatype.org/content/groups/public/" }
+    maven { url "http://mirrors.ibiblio.org/pub/mirrors/maven2/org/acegisecurity/" }
+}
+
+dependencies {
+    compile 'javax.inject:javax.inject:1'
+    compile 'org.scala-lang:scala-library:2.11.1'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.4'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.4'
+
+    testCompile 'org.scalatest:scalatest_2.11:2.2.4'
+    testCompile 'junit:junit:4.12'
+}
