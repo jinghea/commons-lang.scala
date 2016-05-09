@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="joshuahe.com.github.commonslang.utils.DateUtilsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-05-07T07:40:23" hostname="jing-MacBookPro" time="0.005">
-  <properties/>
-  <testcase name="parse simple date should parse the simple date string into java date" classname="joshuahe.com.github.commonslang.utils.DateUtilsTest" time="0.003"/>
-  <testcase name="format a simple date should return a formated string date" classname="joshuahe.com.github.commonslang.utils.DateUtilsTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

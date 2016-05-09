@@ -35,4 +35,12 @@ class DateUtilsTest extends UnitSpec with DateUtils{
 
     }
   }
+
+  "format a null date" should "return empty string" in{
+
+    assertResult(""){
+      formatSimpleDate(null)
+
+    }
+  }
 }

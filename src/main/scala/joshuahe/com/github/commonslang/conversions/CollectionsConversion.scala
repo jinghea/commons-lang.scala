@@ -12,21 +12,19 @@ object MapConversion {
 
   implicit def map2JMap(fromMap: Map[String, Map[String, String]]) = {
 
-    val map: JMap[JString, JMap[JString, JString]] = new JHashMap[JString, JMap[JString, JString]]
+    ((new JHashMap[JString, JMap[JString, JString]]) /: fromMap) {
+      (map, e) => {
 
+        val jNestedMap: JMap[JString, JString] = new JHashMap[JString, JString]
+        e._2.foreach(ee => {
+          jNestedMap.put(ee._1, ee._2)
+        })
 
-    fromMap.map(e => {
+        map.put(e._1, jNestedMap)
 
-      val jNestedMap: JMap[JString, JString] = new JHashMap[JString, JString]
-
-      e._2.foreach(ee => {
-        jNestedMap.put(ee._1, ee._2)
-      })
-
-      map.put(e._1, jNestedMap)
-    })
-
-    map
+        map
+      }
+    }
   }
 }
 
