@@ -10,7 +10,7 @@ import scala.reflect.ClassTag
 
 /**
   *
-  * This class only support Java dto or general class. Doesn't support case class.
+  * If case class, toJson works if case class extends CaseSerializable. for case class fromJson, use value type as java hash map.
   * Created by Jing on 17/09/15.
   */
 trait JsonUtils {
@@ -48,3 +48,5 @@ trait JsonUtils {
   }
 
 }
+
+object JsonUtils extends JsonUtils

@@ -2,6 +2,7 @@ package joshuahe.com.github.commonslang.conversions
 
 
 import java.math.{BigDecimal => JBigDecimal, RoundingMode}
+import java.lang.{Integer => JInteger}
 
 import joshuahe.com.github.commonslang.test.UnitSpec
 import org.junit.runner.RunWith
@@ -76,6 +77,30 @@ class AmountsConversionTest extends UnitSpec{
 
     assertResult(new JBigDecimal("10.98"), "the java bigdecimal"){
       jBigDecimal.setScale(2, RoundingMode.HALF_UP)
+    }
+  }
+
+  "safeJIntegerToIntOption" should "return option Int" in{
+
+    val amount: JInteger = 10
+
+    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
+    val optAmount: Option[Int] = amount
+
+    assertResult(Some(amount), "the optional amount"){
+      optAmount
+    }
+  }
+
+  "safeJIntegerToIntOption when null" should "return option None" in{
+
+    val amount: JInteger = null
+
+    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
+    val optAmount: Option[Int] = amount
+
+    assertResult(None, "the None"){
+      optAmount
     }
   }
 }
