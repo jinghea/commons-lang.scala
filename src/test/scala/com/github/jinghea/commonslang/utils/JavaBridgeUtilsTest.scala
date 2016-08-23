@@ -1,8 +1,8 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 import java.text.SimpleDateFormat
 
-import joshuahe.com.github.commonslang.test.UnitSpec
+import com.github.jinghea.commonslang.test.UnitSpec
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 

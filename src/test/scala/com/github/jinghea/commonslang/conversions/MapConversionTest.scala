@@ -1,16 +1,16 @@
-package joshuahe.com.github.commonslang.conversions
+package com.github.jinghea.commonslang.conversions
 
 import java.lang.{Long => JLong, Object => JObject, String => JString}
 import java.util.{Collection => JCollection, HashMap => JHashMap, List => JList, Map => JMap, Set => JSet}
 
-import joshuahe.com.github.commonslang.test.UnitSpec
+import com.github.jinghea.commonslang.test.UnitSpec
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
 import scala.collection.Map
 import scala.collection.mutable.{HashMap => MHashMap, Map => MMap}
 
-import joshuahe.com.github.commonslang.conversions.MapConversion.map2JMap
+import com.github.jinghea.commonslang.conversions.MapConversion.map2JMap
 
 /**
  * Created by Jing on 7/04/2016.

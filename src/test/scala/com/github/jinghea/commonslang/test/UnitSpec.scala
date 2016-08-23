@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.test
+package com.github.jinghea.commonslang.test
 
 import org.scalatest._
 

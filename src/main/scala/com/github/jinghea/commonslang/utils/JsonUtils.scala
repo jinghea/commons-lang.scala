@@ -1,10 +1,10 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 import java.lang.{Long => JLong, Object => JObject, String => JString}
 import java.util.{Collection => JCollection, HashMap => JHashMap, List => JList, Map => JMap, Set => JSet}
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import joshuahe.com.github.commonslang.model.CaseSerializable
+import com.github.jinghea.commonslang.model.CaseSerializable
 
 import scala.reflect.ClassTag
 

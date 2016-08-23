@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 import java.io.IOException
 import javax.servlet.ServletOutputStream

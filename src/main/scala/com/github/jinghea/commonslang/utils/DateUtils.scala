@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 import java.text.SimpleDateFormat
 import java.util.Date

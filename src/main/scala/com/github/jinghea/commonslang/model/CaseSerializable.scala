@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.model
+package com.github.jinghea.commonslang.model
 
 /**
   * Created by jing on 9/05/16.

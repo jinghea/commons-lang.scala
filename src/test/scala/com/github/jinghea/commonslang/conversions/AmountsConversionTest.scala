@@ -1,10 +1,10 @@
-package joshuahe.com.github.commonslang.conversions
+package com.github.jinghea.commonslang.conversions
 
 
 import java.math.{BigDecimal => JBigDecimal, RoundingMode}
 import java.lang.{Integer => JInteger}
 
-import joshuahe.com.github.commonslang.test.UnitSpec
+import com.github.jinghea.commonslang.test.UnitSpec
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
@@ -22,7 +22,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount = new JBigDecimal("10")
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJBigDecimal2BigDecimal
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.safeJBigDecimal2BigDecimal
     val sAmount:BigDecimal = amount
 
     assertResult(BigDecimal(10), "the scala bigdecimal"){
@@ -35,7 +35,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount:JBigDecimal = null
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJBigDecimal2BigDecimal
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.safeJBigDecimal2BigDecimal
     val sAmount:BigDecimal = amount
 
     assertResult(BigDecimal(0), "the scala bigdecimal"){
@@ -47,7 +47,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount:BigDecimal = BigDecimal(10)
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.bigDecimal2JBigDecimal
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.bigDecimal2JBigDecimal
     val jBigDecimal:JBigDecimal = amount
 
     assertResult(new JBigDecimal("10"), "the java bigdecimal"){
@@ -59,7 +59,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount:Int = 10
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.int2JBigDecimal
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.int2JBigDecimal
     val jBigDecimal:JBigDecimal = amount
 
     assertResult(new JBigDecimal("10"), "the java bigdecimal"){
@@ -72,7 +72,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount:Double = 10.98d
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.double2JBigDecimal
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.double2JBigDecimal
     val jBigDecimal:JBigDecimal = amount
 
     assertResult(new JBigDecimal("10.98"), "the java bigdecimal"){
@@ -84,7 +84,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount: JInteger = 10
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
     val optAmount: Option[Int] = amount
 
     assertResult(Some(amount), "the optional amount"){
@@ -96,7 +96,7 @@ class AmountsConversionTest extends UnitSpec{
 
     val amount: JInteger = null
 
-    import joshuahe.com.github.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
+    import com.github.jinghea.commonslang.conversions.AmountsConversion.safeJIntegerToIntOption
     val optAmount: Option[Int] = amount
 
     assertResult(None, "the None"){

@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 /**
  * Created by Jing on 18/09/15.

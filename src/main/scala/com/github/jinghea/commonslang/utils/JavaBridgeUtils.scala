@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.utils
+package com.github.jinghea.commonslang.utils
 
 
 import java.lang.{String => JString, Integer => JInteger, Long => JLong}

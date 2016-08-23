@@ -1,4 +1,4 @@
-package joshuahe.com.github.commonslang.conversions
+package com.github.jinghea.commonslang.conversions
 
 import java.lang.{Long => JLong, Object => JObject, String => JString}
 import java.math.{BigDecimal => JBigDecimal}
