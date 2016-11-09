@@ -7,7 +7,6 @@ import com.github.jinghea.commonslang.test.UnitSpec
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 
-import scala.collection.Map
 import scala.collection.mutable.{HashMap => MHashMap, Map => MMap}
 
 import com.github.jinghea.commonslang.conversions.MapConversion.map2JMap

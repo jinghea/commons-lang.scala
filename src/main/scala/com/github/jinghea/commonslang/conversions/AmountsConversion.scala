@@ -3,6 +3,7 @@ package com.github.jinghea.commonslang.conversions
 
 import java.math.{BigDecimal => JBigDecimal}
 import java.lang.{Integer => JInteger}
+import java.lang.{Boolean => JBoolean}
 
 /**
   * Created by Jing on 11/08/15.
