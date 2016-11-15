@@ -16,11 +16,15 @@ package object AmountUtils {
 
   }
 
-
   def round(amount: BigDecimal, scale: Int): BigDecimal = {
 
     amount.setScale(scale, BigDecimal.RoundingMode.HALF_UP)
 
+  }
+
+  def downRound(amount: BigDecimal): BigDecimal = {
+
+    amount.setScale(0, BigDecimal.RoundingMode.DOWN)
   }
 
   def calcPercent(amount: BigDecimal, total: BigDecimal): BigDecimal = {

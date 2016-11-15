@@ -28,3 +28,7 @@ dependencies {
     testCompile 'org.scalatest:scalatest_2.11:2.2.4'
     testCompile 'junit:junit:4.12'
 }
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.useAnt = false
+}
