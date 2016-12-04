@@ -24,4 +24,23 @@ object CollectionUtils {
       }
     })
   }
+
+  def replaceAs[A](it: Iterable[A], replaceTo: A)(implicit m: AbsElementsCompare[A]): Iterable[A] ={
+    it.map(i => if (m.test(i, replaceTo)) replaceTo else i)
+  }
+}
+
+
+abstract class AbsElementsCompare[A]{
+  def test(a: A, b:A): Boolean
+}
+
+object ElementsCompare{
+
+  implicit object StringCompare extends AbsElementsCompare[String] {
+    override def test(a: String, b:String): Boolean = a == b
+  }
+  implicit object IntCompare extends AbsElementsCompare[Int] {
+    override def test(a: Int, b:Int): Boolean = a == b
+  }
 }

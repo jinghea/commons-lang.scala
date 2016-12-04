@@ -43,6 +43,31 @@ class CollectionUtilsTest extends UnitSpec with DateUtils {
 
   }
 
+  "implicit replace as" should "replace items" in{
+
+    import ElementsCompare._
+
+    /** This method takes a List[A] returns an A which represent the combined value of applying the monoid operation successively across the whole list. Making the parameter m implicit here means we only have to provide the xs parameter at the call site, since if we have a List[A] we know what type A actually is and therefore what type Monoid[A] is needed. We can then implicitly find whichever val or object in the current scope also has that type and use that without needing to specify it explicitly. */
+
+    assertResult("A,B"){
+      CollectionUtils.replaceAs(Vector("A","B"), "B").mkString(",")
+    }
+
+    assertResult("1,2"){
+      CollectionUtils.replaceAs(Vector(1,2), 3).mkString(",")
+    }
+
+    case class ThisVO(a:Int, b:String)
+
+    implicit object ThisVOCompare extends AbsElementsCompare[ThisVO] {
+      override def test(x: ThisVO, y:ThisVO): Boolean = x.a == y.a
+    }
+
+    assertResult("ThisVO(1,Hello),ThisVO(2,2)"){
+      CollectionUtils.replaceAs(Vector(ThisVO(1, "1"),ThisVO(2,"2")), ThisVO(1,"Hello")).mkString(",")
+    }
+  }
+
 }
 
 
