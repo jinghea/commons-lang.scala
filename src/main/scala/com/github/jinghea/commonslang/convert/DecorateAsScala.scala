@@ -14,4 +14,7 @@ trait DecorateAsScala {
 
   implicit def asScalaBigDecimalConverter(amount: JBigDecimal): AsScala[BigDecimal] =
     new AsScala(if (amount == null) BigDecimal(0) else amount)
+
+  implicit def asScalaBooleanConverter(bool: JBoolean): AsScala[Boolean] =
+    new AsScala(if (bool == null) false else bool.booleanValue())
 }

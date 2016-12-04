@@ -34,4 +34,22 @@ class JavaConvertersTest extends UnitSpec {
       amount.asScala
     }
   }
+
+  "convert java boolean to " should "return scala boolean" in {
+
+    val bool = JBoolean.TRUE
+
+    assertResult(true, "the scala boolean") {
+      bool.asScala
+    }
+  }
+
+  "convert null java boolean to " should "return false" in {
+
+    val bool: JBoolean = null
+
+    assertResult(false, "the scala boolean") {
+      bool.asScala
+    }
+  }
 }

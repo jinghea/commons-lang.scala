@@ -33,7 +33,7 @@ package object AmountUtils {
 
       case t if t > 0 => {
 
-        val result = round(amount * 100 / t)
+        val result = amount * 100 / t
 
         result match {
           case l if l < 0 => 0
@@ -43,5 +43,19 @@ package object AmountUtils {
       case _ => 0
     }
   }
+
+  def multiplyPercent(amount: BigDecimal, percentage: BigDecimal): BigDecimal = {
+
+    amount * percentage / 100
+  }
+
+  def positiveAmount(amount: BigDecimal): BigDecimal = {
+
+    amount match {
+      case x if x.signum >= 0 => amount
+      case _ => 0
+    }
+  }
+
 
 }
