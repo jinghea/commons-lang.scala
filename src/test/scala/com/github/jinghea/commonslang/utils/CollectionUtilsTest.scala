@@ -47,8 +47,6 @@ class CollectionUtilsTest extends UnitSpec with DateUtils {
 
     import ElementsCompare._
 
-    /** This method takes a List[A] returns an A which represent the combined value of applying the monoid operation successively across the whole list. Making the parameter m implicit here means we only have to provide the xs parameter at the call site, since if we have a List[A] we know what type A actually is and therefore what type Monoid[A] is needed. We can then implicitly find whichever val or object in the current scope also has that type and use that without needing to specify it explicitly. */
-
     assertResult("A,B"){
       CollectionUtils.replaceAs(Vector("A","B"), "B").mkString(",")
     }
